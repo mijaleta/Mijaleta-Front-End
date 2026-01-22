@@ -36,24 +36,25 @@
     "eject": "react-scripts eject",
     "vercel-build": "npm install --legacy-peer-deps && npm run build"
   },
-  "overrides": {
+"overrides": {
   "ajv": "6.12.6",
   "ajv-keywords": "3.5.2",
-    "react-scripts": {
-      "webpack": {
-        "configure": {
-          "resolve": {
-            "fallback": {
-              "crypto": false,
-              "stream": false,
-              "path": false,
-              "os": false
-            }
+  "ajv-formats": "2.1.1",
+  "react-scripts": {
+    "webpack": {
+      "configure": {
+        "resolve": {
+          "fallback": {
+            "crypto": false,
+            "stream": false,
+            "path": false,
+            "os": false
           }
         }
       }
     }
-  },
+  }
+},
   "eslintConfig": {
     "extends": [
       "react-app",
