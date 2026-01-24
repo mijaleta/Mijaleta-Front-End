@@ -4,20 +4,6 @@ export const educationData = [
         institution: 'Jimma institute of Technology',
         course: 'Bachelor Degree In Software Engineering',
         startYear: '2020',
-        endYear: 'Present'
+        endYear: '2024'
     },
-    // {
-    //     id: 1,
-    //     institution: 'Jimma institute of Technology',
-    //     course: 'Bachelor Degree In Software Engineering',
-    //     startYear: '2020',
-    //     endYear: 'Present'
-    // },
-    // {
-    //     id: 1,
-    //     institution: 'Jimma institute of Technology',
-    //     course: 'Bachelor Degree In Software Engineering',
-    //     startYear: '2020',
-    //     endYear: 'Present'
-    // }
 ]
