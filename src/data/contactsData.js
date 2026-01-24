@@ -1,6 +1,6 @@
 export const contactsData = {
     email: 'miratuujaallataa@gmail.com',
-    phone: '+251 73284058',
+    phone: '+251 61874868',
     address: 'Addis Ababa, Ethiopia',
     github: 'https://github.com/mijaleta',
     facebook: 'https://www.facebook.com/miretu.jaleta',
