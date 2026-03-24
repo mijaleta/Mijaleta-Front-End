@@ -74,6 +74,7 @@ import unity from '../assets/svg/skills/unity.svg'
 import wolframalpha from '../assets/svg/skills/wolframalpha.svg'
 
 import canva from '../assets/svg/skills/canva.svg'
+import nodejs from '../assets/svg/skills/nodejs.svg'
 
 
 export const skillsImage = (skill) => {
@@ -128,6 +129,7 @@ export const skillsImage = (skill) => {
         case 'postgresql':
             return postgresql;
         case 'tailwind':
+        case 'tailwind css':
             return tailwind;
         case 'vitejs':
             return vitejs;
@@ -166,6 +168,7 @@ export const skillsImage = (skill) => {
         case 'deno':
             return deno;
         case 'django':
+        case 'django rest framework':
             return django;
         case 'firebase':
             return firebase;
@@ -178,6 +181,9 @@ export const skillsImage = (skill) => {
         case 'lightroom':
             return lightroom;
         case 'materialui':
+        case 'material-ui (mui)':
+        case 'material-ui':
+        case 'mui':
             return materialui;
         case 'nginx':
             return nginx;
@@ -227,6 +233,10 @@ export const skillsImage = (skill) => {
             return wolframalpha;
         case 'canva':
             return canva;
+        case 'node js':
+        case 'nodejs':
+        case 'node':
+            return nodejs;
         default:
             break;
     }
