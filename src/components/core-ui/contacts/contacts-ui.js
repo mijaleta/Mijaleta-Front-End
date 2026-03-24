@@ -36,7 +36,7 @@ const ContactUI = ({
         <div className="contacts-body">
           <div className="contacts-form">
             <div className="contact-form-image">
-              <img src="/MIRETU.jpg" alt="Contact Form" style={{ maxWidth: '800px', maxHeight: '600px', width: '100%', height: 'auto' }} />
+              <img src="/MIRETU2.jpg" alt="Contact Form" style={{ maxWidth: '800px', maxHeight: '600px', width: '100%', height: 'auto' }} />
             </div>
             <Snackbar
               anchorOrigin={{
