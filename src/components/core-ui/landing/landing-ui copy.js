@@ -94,9 +94,15 @@ function LandingUI({ theme, drawerOpen, classes }) {
                     >
                         {/* <h6 style={{ color: theme.primary }}>{headerData.title}</h6> */}
                         <h1>{headerData.name}</h1>
-                        <h2 className="typed-header" style={{ color: theme.primary, fontSize: '20px' }}>
-                            Fullstack Developer
-                        </h2>
+                        <Typed
+                            strings={[
+                                'Fullstack Developer']}
+                            typeSpeed={40}
+                            backSpeed={50}
+                            className="typed-header"
+                            style={{ color: theme.primary, fontSize: '20px' }}
+                            loop
+                        />
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>
