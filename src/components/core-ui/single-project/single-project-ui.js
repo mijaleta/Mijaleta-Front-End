@@ -3,19 +3,19 @@ import Fade from "react-reveal/Fade";
 import "./single-project.css";
 
 const gradients = [
-  // Blue gradients (using primary color #1D9BF0)
-  { gradient: "linear-gradient(135deg, #1D9BF0 0%, #0F0C41 100%)", dark: false },
-  { gradient: "linear-gradient(135deg, #1D9BF0 0%, #8B98A5 100%)", dark: false },
-  { gradient: "linear-gradient(135deg, #0F0C41 0%, #EFF3F4 100%)", dark: false },
+  // Bright blue gradients
   { gradient: "linear-gradient(135deg, #1D9BF0 0%, #EFF3F4 100%)", dark: false },
-  // Lighter purple/blue gradients
-  { gradient: "linear-gradient(135deg, #1D9BF0 0%, #0F0C41 100%)", dark: false },
-  { gradient: "linear-gradient(135deg, #8B98A5 0%, #EFF3F4 100%)", dark: false },
-  // Gray variations
-  { gradient: "linear-gradient(135deg, #8B98A5 0%, #EFF3F4 100%)", dark: false },
   { gradient: "linear-gradient(135deg, #EFF3F4 0%, #1D9BF0 100%)", dark: false },
   { gradient: "linear-gradient(135deg, #8B98A5 0%, #1D9BF0 100%)", dark: false },
+  { gradient: "linear-gradient(135deg, #1D9BF0 0%, #8B98A5 100%)", dark: false },
+  // Light gray combinations
   { gradient: "linear-gradient(135deg, #EFF3F4 0%, #8B98A5 100%)", dark: false },
+  { gradient: "linear-gradient(135deg, #8B98A5 0%, #EFF3F4 100%)", dark: false },
+  { gradient: "linear-gradient(135deg, #EFF3F4 0%, #0F0C41 100%)", dark: false },
+  { gradient: "linear-gradient(135deg, #0F0C41 0%, #EFF3F4 100%)", dark: false },
+  // Lighter variations
+  { gradient: "linear-gradient(135deg, #1D9BF0 0%, #0F0C41 50%, #EFF3F4 100%)", dark: false },
+  { gradient: "linear-gradient(135deg, #EFF3F4 0%, #8B98A5 50%, #1D9BF0 100%)", dark: false },
 ];
 
 const getGradientStyle = (id) => {
