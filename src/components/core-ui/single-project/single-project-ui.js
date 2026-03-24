@@ -1,5 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import { FaCode, FaLaptopCode, FaLayerGroup, FaRocket } from "react-icons/fa";
 import "./single-project.css";
 
 const gradients = [
@@ -46,6 +47,7 @@ function SingleProjectUI({
             id={name.replace(" ", "-").toLowerCase()}
             style={{ color: getTextColor(id) }}
           >
+            <FaLaptopCode style={{ marginRight: '10px', verticalAlign: 'middle' }} />
             {name}
           </h2>
           <p
@@ -55,6 +57,7 @@ function SingleProjectUI({
               backgroundColor: getTextColor(id) === '#ffffff' ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.5)',
             }}
           >
+            <FaLayerGroup style={{ marginRight: '8px', flexShrink: 0 }} />
             {desc}
           </p>
         </div>
