@@ -1,13 +1,10 @@
 import { IconButton, Snackbar, SnackbarContent } from "@mui/material";
 import React, { useContext } from "react";
-import { AiOutlineCheckCircle, AiOutlineSend } from "react-icons/ai";
-import axios from 'axios'; 
 import { FiAtSign, FiPhone } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { ThemeContext } from "../../../contexts/theme-context";
 import { contactsData } from "../../../data/contactsData";
-// import dotenv from 'dotenv';
 
 import {
   FaFacebook,
@@ -19,50 +16,16 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import "./contacts.css";
-// require('dotenv').config()
 const ContactUI = ({
   handleClose,
   classes,
-  name,
-  setName,
-  form,
-  email,
-  setEmail,
-  message,
-  setMessage,
 }) => {
    
-  const [success, setSuccess] = React.useState(false);
   const [errMsg, setErrMsg] = React.useState('');
   const [open, setOpen] = React.useState(false);
   const { theme } = useContext(ThemeContext);
 
-  const handleContactForm = async (e) => {
-    e.preventDefault();
-    // http://localhost:5000
-    // ${process.env.REACT_APP_SERVER_URL}
-    // Send a post request with input values
-    try {
-      const response = await axios.post(`https://miretu-jaletac.onrender.com/api/contacts`, { name, email, message });
-      const data = response.data;
-      // Set success state and snackbar message
-      setSuccess(true);
-      setErrMsg('Your message has been sent successfully!');
-      // Reset input values
-      setName('');
-      setEmail('');
-      setMessage('');
-      // Open snackbar
-      setOpen(true);
-    } catch (err) {
-      // Set error state and snackbar message
-      setSuccess(false);
-      // Check if err.response exists before accessing its data property
-      setErrMsg(err.response ? err.response.data.error : 'Something went wrong!');
-      // Open snackbar
-      setOpen(true);
-    }
-  };
+ 
   return (
     <div
       className="contacts"
@@ -70,74 +33,11 @@ const ContactUI = ({
       style={{ backgroundColor: theme.secondary }}
     >
       <div className="contacts--container">
-        <h1 style={{ color: theme.primary }}>Contacts</h1>
         <div className="contacts-body">
           <div className="contacts-form">
-            <form ref={form} onSubmit={handleContactForm}>
-              <div className="input-container">
-                <label htmlFor="Name" className={classes.label}>
-                  Name
-                </label>
-                <input
-                  placeholder="Enter Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  type="text"
-                  name="user_name"
-                  className={`form-input ${classes.input}`}
-                />
-              </div>
-              <div className="input-container">
-                <label htmlFor="Email" className={classes.label}>
-                  Email
-                </label>
-                <input
-                  placeholder="Enter Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  name="user_email"
-                  className={`form-input ${classes.input}`}
-                />
-              </div>
-              <div className="input-container">
-                <label htmlFor="Message" className={classes.label}>
-                  Message
-                </label>
-                <textarea
-                  placeholder="Type your message...."
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  type="text"
-                  name="message"
-                  className={`form-message ${classes.message}`}
-                />
-              </div>
-
-              <div className="submit-btn">
-                <button type="submit" className={classes.submitBtn}>
-                  <p>{!success ? "Send" : "Sent"}</p>
-                  <div className="submit-icon">
-                    <AiOutlineSend
-                      className="send-icon"
-                      style={{
-                        animation: !success
-                          ? "initial"
-                          : "fly 0.8s linear both",
-                        position: success ? "absolute" : "initial",
-                      }}
-                    />
-                    <AiOutlineCheckCircle
-                      className="success-icon"
-                      style={{
-                        display: !success ? "none" : "inline-flex",
-                        opacity: !success ? "0" : "1",
-                      }}
-                    />
-                  </div>
-                </button>
-              </div>
-            </form>
+            <div className="contact-form-image">
+              <img src="/MIRETU.jpg" alt="Contact Form" style={{ maxWidth: '800px', maxHeight: '600px', width: '100%', height: 'auto' }} />
+            </div>
             <Snackbar
               anchorOrigin={{
                 vertical: "top",
